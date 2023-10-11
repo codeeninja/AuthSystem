@@ -211,3 +211,64 @@ app.post('/forgot-password', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+// app.get("/alluser", async function (req, resp) {
+//   try {
+//     const user = await Usernews.findAll();
+//     resp.send(user);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
+
+// app.get("/getuserbyid/:id", async function (req, resp) {
+//   try {
+//     const userid = req.params.id;
+//     const user = await Usernews.findByPk(userid);
+//     resp.send(user);
+//   } catch (err) {
+//     resp.send(err);
+//   }
+// });
+
+// app.delete("/delete/:id", async function (req, resp) {
+//   const userid = req.params.id;
+//   const user = await Usernews.findByPk(userid);
+//   if (user) {
+//     user.destroy();
+//     resp.send("Delete User id is" + " " + user.id);
+//   }
+// });
+
+// app.put("/update/:id", async function (req, resp) {
+//   const userId = req.params.id;
+//   const { firstName, lastName } = req.body;
+//   const user = await Usernews.findByPk(userId);
+
+//   if (user) {
+//     user.firstName = firstName;
+//     user.lastName = lastName;
+
+//     try {
+//       await user.save(); // Call save on the user instance
+//       resp.send(`User Updated Successfully: ${user.id}`);
+//     } catch (error) {
+//       console.error(error);
+//       resp.status(500).send("Failed to update user");
+//     }
+//   } else {
+//     resp.status(404).json({ error: "User not found" });
+//   }
+// });
+// const Usernews = sequelize.define("Usernews", {
+//   firstName: {
+//     type: DataTypes.STRING,
+//   },
+//   lastName: {
+//     type: DataTypes.STRING,
+//   },
+// });
+// Usernews.sync().then(()=>{
+//   console.log("Table created");
+// }).catch((err)=>{
+//   console.log("line25",err);
+// });
